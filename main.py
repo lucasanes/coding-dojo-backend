@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify # type: ignore
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def heapify(array,tamanho_heap,i):
     largest = i 
