@@ -37,7 +37,7 @@ def ordenar():
     
     array = data['array']
     
-    if not isinstance(array, list) or not all(isinstance(x, (int, float)) for x in array):
+    if not isinstance(array, list) or not all(isinstance(x, (int)) for x in array):
         return jsonify({'error': 'Invalid array format'}), 400
     
     sorted_array = heapsort(array)
